@@ -1,0 +1,25 @@
+API - controle de notas de alunos
+
+É necessário:
+
+• Padrão REST em formato de micro serviço
+• SpringBoot
+• Java 8
+• Maven
+• A aplicação deverá persistir em banco de dados
+• Código deve ser executável
+
+
+As notas dos estudantes devem conter:
+
+• Data da nota;
+• Nome do estudante;
+• Nome da disciplina;
+• Nota;
+• Aprovado ou reprovado;
+• Podem ser adicionados demais campos que achares necessário.
+
+Bônus:
+• Integration test e Unit test
+• MongoDB
+• Deploy em AWS/GCP
