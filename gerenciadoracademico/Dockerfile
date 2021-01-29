@@ -2,6 +2,6 @@ FROM openjdk
 
 WORKDIR /app
 
-COPY target/gerenciadoracademico-0.0.1-SNAPSHOT.jar /app/gerenciadoracademico.jar
+COPY target/gerenciadoracademico.jar /app/gerenciadoracademico.jar
 
 ENTRYPOINT ["java", "-jar", "gerenciadoracademico.jar"]
