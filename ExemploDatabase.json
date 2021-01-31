@@ -1,0 +1,65 @@
+// Students
+{
+    "id": "601459bd34628e2543bd82cd",
+    "name": "Maria Brown",
+    "email": "maria@gmail.com",
+},
+{
+    "id": "601459bd34628e2543bd82ce",
+    "name": "Alex Green",
+    "email": "alex@gmail.com",
+},
+{
+    "id": "601459bd34628e2543bd82cf",
+    "name": "Bob Grey",
+    "email": "bob@gmail.com",
+},
+
+// Grades
+{
+	"id": "1",
+	"date": "2020-01-29",
+	"student": {
+		"id": "601459bd34628e2543bd82cd",
+		"name": "Maria Brown",
+	},
+	"subject":{
+		"id": "1",
+		"name": "Hístória",
+		"teacher": "Rafaela Monteiro",
+	},
+	"grade": "10",
+	"approved?": "Sim",
+},
+
+{
+	"id": "2",
+	"date": "2020-01-29",
+	"student": {
+		"id": "601459bd34628e2543bd82ce",
+		"name": "Alex Green",
+	},
+	"subject":{
+		"id": "2",
+		"name": "Português",
+		"teacher": "Luiz Gomez",
+	},
+	"grade": "5",
+	"approved?": "Não",
+},
+
+{
+	"id": "3",
+	"date": "2020-01-29",
+	"student": {
+		"id": "601459bd34628e2543bd82cf",
+		"name": "Bob Grey",
+	},
+	"subject":{
+		"id": "1",
+		"name": "Hístória",
+		"teacher": "Rafaela Monteiro",
+	},
+	"grade": "2",
+	"approved?": "Não",
+},

@@ -1,0 +1,13 @@
+server:
+ port: 8080
+spring:
+  application:
+    name: grademanager
+  jmx:
+    enabled: false
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/db
+      host: mongo
+      port: 27017
+      database: db
