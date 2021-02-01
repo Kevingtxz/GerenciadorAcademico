@@ -7,6 +7,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.kevin.grademanager.dto.StudentDTO;
+
 @Document(collection="grade")
 public class Grade implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -14,34 +16,83 @@ public class Grade implements Serializable {
 	@Id
 	private String id;
 	private Date date;
-	private String student_name;
-	private String subject_name;
+	private String subject;
 	private String grade;
 	private String approved;
+	private String student_name;
 	
 	@DBRef(lazy=true)
-	private Student student;
-	@DBRef(lazy=true)
-	private Subject subject;
+	private StudentDTO student;
 	
 	public Grade() {
 	}
-	
-	
 
-	public Grade(String id, Date date, String grade, String approved, Student student, Subject subject) {
+	public Grade(String id, Date date, String subject, String grade, String approved, StudentDTO student) {
 		super();
 		this.id = id;
 		this.date = date;
+		this.subject = subject;
 		this.grade = grade;
 		this.approved = approved;
 		this.student = student;
 		this.student_name = student.getStudent_name();
-		this.subject = subject;
-		this.subject_name = subject.getSubject_name();
 	}
 
+	public String getId() {
+		return id;
+	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getStudent_name() {
+		return student_name;
+	}
+
+	public void setStudent_name(String student_name) {
+		this.student_name = student_name;
+	}
+	
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public String getApproved() {
+		return approved;
+	}
+
+	public void setApproved(String approved) {
+		this.approved = approved;
+	}
+
+	public StudentDTO getStudent() {
+		return student;
+	}
+
+	public void setStudent(StudentDTO student) {
+		this.student = student;
+	}
 
 	@Override
 	public int hashCode() {

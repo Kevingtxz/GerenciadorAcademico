@@ -1,22 +1,24 @@
-package com.kevin.grademanager.domain;
+package com.kevin.grademanager.dto;
 
 import java.io.Serializable;
+
+// Está anotado como coleção apenas para demonstração, a classe Student deve estar em outro microserviço
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="student")
-public class Student implements Serializable {
+public class StudentDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private String id;
 	private String student_name;
 	
-	public Student(){
+	public StudentDTO(){
 	}
 
-	public Student(String id, String student_name) {
+	public StudentDTO(String id, String student_name) {
 		super();
 		this.id = id;
 		this.student_name = student_name;
@@ -54,7 +56,7 @@ public class Student implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Student other = (Student) obj;
+		StudentDTO other = (StudentDTO) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
