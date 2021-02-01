@@ -9,5 +9,4 @@ public class GrademanagerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GrademanagerApplication.class, args);
 	}
-
 }

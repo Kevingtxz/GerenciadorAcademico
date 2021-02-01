@@ -1,21 +1,14 @@
 package com.kevin.grademanager.dto;
 
-import java.io.Serializable;
-
-import org.springframework.data.mongodb.core.mapping.DBRef;
-
 import com.kevin.grademanager.domain.Grade;
 
-public class GradeDTO implements Serializable{
-	private static final long serialVersionUID = 1L;
+public class GradeDTO{
 	
 	private String id;
 	private String subject;
 	private String grade;
 	private String approved;
 	private String student_name;
-	
-	@DBRef(lazy=true)
 	private StudentDTO student;
 	
 	public GradeDTO() {
