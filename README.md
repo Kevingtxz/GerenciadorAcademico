@@ -7,6 +7,8 @@ A aplicação está configurada com:
 
 spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb ~ server.port=8090
 
+Sendo que o db gradedb tenha a coleção grade
+
 Basta rodar a https://github.com/Kevingtxz/GradeManager/blob/main/grademanager/src/main/java/com/kevin/grademanager/GrademanagerApplication.java em Spring App para funcionar
 
 ## Pasta spring-boot+cloud
