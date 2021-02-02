@@ -1,0 +1,10 @@
+server.port=8090
+spring.application.name=grade-service
+spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb
+feign.hystrix.enabled=true
+hystrix.shareSecurityContext=true
+
+
+okta.oauth2.issuer=	https://dev-32404248.okta.com/oauth2/default	
+okta.oauth2.client-id=0oa4udu8xLQ3IAsOO5d6
+okta.oauth2.client-secret=uRrldFBb0y-FwYxiu7Uy0E0lICuY3ZExXW68qvAJ

@@ -1,0 +1,30 @@
+package com.kevin.grademanager;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+@EnableDiscoveryClient
+@SpringBootApplication
+public class GrademanagerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(GrademanagerApplication.class, args);
+    }
+
+// Esse código é feito para bloquear acesso direto a aplicação, eu desativei para que se pudesse testar o código diretamente
+    
+//    @Configuration
+//    static class OktaOAuth2WebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
+//
+//        @Override
+//        protected void configure(HttpSecurity http) throws Exception {
+//            // @formatter:off
+//            http
+//                .authorizeRequests().anyRequest().authenticated()
+//                    .and()
+//                .oauth2ResourceServer().jwt();
+//            // @formatter:on
+//        }
+//    }
+}

@@ -1,0 +1,85 @@
+[12:45 PM, 1/29/2021] Kevin: API - controle de notas de alunos
+
+É necessário:
+
+• Padrão REST em formato de micro serviço
+• SpringBoot
+• Java 8
+• Maven
+• A aplicação deverá persistir em banco de dados
+• Código deve ser executável
+
+
+As notas dos estudantes devem conter:
+
+• Data da nota;
+• Nome do estudante;
+• Nome da disciplina;
+• Nota;
+• Aprovado ou reprovado;
+• Podem ser adicionados demais campos que achares necessário.
+
+Bônus:
+• Integration test e Unit test
+• MongoDB
+• Deploy em AWS/GCP
+[12:46 PM, 1/29/2021] Kevin: https://github.com/acenelio/workshop-springboot2-mongodb
+[12:46 PM, 1/29/2021] Kevin: Na teoria, é bem simples: garanta que seus serviços estejam sendo expostos com boa granularidade, sem fortes dependências uns com os outros, e que cada serviço seja útil, com uma função clara e indivisível.
+[12:57 PM, 1/29/2021] Kevin: https://sensedia.com/api/arquitetura-de-microsservicos-implantar/
+[2:53 PM, 1/29/2021] Kevin: CRUD
+[2:54 PM, 1/29/2021] Kevin: Microserviços
+[2:55 PM, 1/29/2021] Kevin: AWS
+[2:55 PM, 1/29/2021] Kevin: Testes Unitários e de Integração
+[11:29 PM, 1/29/2021] Kevin: https://youtu.be/tNi8ymBdAh4?t=438
+[9:02 AM, 1/30/2021] Kevin: gRPC
+[1:43 PM, 1/30/2021] Kevin: Desafios:
+	.Microserviços**
+	.Código executável em Docker
+	.Deploy em AWS
+	.Integration test e Unit test
+[2:13 PM, 1/30/2021] Kevin: https://hub.docker.com/_/mongo
+[4:40 PM, 1/30/2021] Kevin: 10 horas
+[12:10 PM, 1/31/2021] Kevin: https://developer.okta.com/blog/2019/05/22/java-microservices-spring-boot-spring-cloud
+[1:32 PM, 1/31/2021] Kevin: <spring.cloud-version>Hoxton.SR8</spring.cloud-version>
+[1:32 PM, 1/31/2021] Kevin: <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+        	<groupId>org.springframework.cloud</groupId>
+        	<artifactId>spring-cloud-starter-config</artifactId>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+[1:33 PM, 1/31/2021] Kevin: <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>${spring.cloud-version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+[4:11 PM, 1/31/2021] Kevin: Integration test e Unit test ~ organizar coisas básicas de segurança
+[4:11 PM, 1/31/2021] Kevin: Deploy Docker AWS
+[4:11 PM, 1/31/2021] Kevin: Microservice
+[11:36 AM, 2/1/2021] Kevin: https://phoenixnap.com/kb/install-minikube-on-ubuntu
+[6:45 PM, 2/1/2021] Kevin: issuer: https://dev-32404248.okta.com/oauth2/default
+[6:46 PM, 2/1/2021] Kevin: clientId: 0oa4udu8xLQ3IAsOO5d6
+[6:46 PM, 2/1/2021] Kevin: secret: uRrldFBb0y-FwYxiu7Uy0E0lICuY3ZExXW68qvAJ
+[6:46 PM, 2/1/2021] Kevin: domain: dev-32404248.okta.com
+[6:47 PM, 2/1/2021] Kevin: Initiate login URI http://localhost:8080/login/oauth2/grade/okta
+[6:47 PM, 2/1/2021] Kevin: Login redirect URIs 
+http://localhost:8080/grades	
+http://localhost:8080/approved	
+Logout redirect URIs 
+http://localhost:8080

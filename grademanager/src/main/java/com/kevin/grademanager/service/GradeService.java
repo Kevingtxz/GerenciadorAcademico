@@ -1,17 +1,14 @@
 package com.kevin.grademanager.service;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Optional;
-import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kevin.grademanager.domain.Grade;
 import com.kevin.grademanager.dto.GradeDTO;
-import com.kevin.grademanager.dto.GradeNewDTO;
 import com.kevin.grademanager.repository.GradeRepository;
 import com.kevin.grademanager.service.exception.ObjectNotFoundException;    
 
@@ -51,7 +48,6 @@ public class GradeService {
 		newObj.setSubject(obj.getSubject());
 		newObj.setGrade(obj.getGrade());
 		newObj.setApproved(obj.getApproved());
-		newObj.setStudent_name(obj.getStudent().getStudent_name());
 		newObj.setStudent(obj.getStudent());
 	}
 
@@ -61,9 +57,7 @@ public class GradeService {
 	
 	
 	// Esse formato de data está como exemplo
-	public Grade fromNewDTO(GradeNewDTO objNewDto) throws ParseException {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
-		return new Grade(null, sdf.parse("01/02/2021"), objNewDto.getSubject(), objNewDto.getGrade(), objNewDto.getApproved(), objNewDto.getStudent());
+	public Grade fromNewDTO(GradeDTO objNewDto) throws ParseException {
+		return new Grade(null, objNewDto.getDate(), objNewDto.getSubject(), objNewDto.getGrade(), objNewDto.getApproved(), objNewDto.getStudent());
 	}
 }

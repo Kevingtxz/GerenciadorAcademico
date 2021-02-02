@@ -1,0 +1,13 @@
+spring.application.name=api-gateway
+feign.hystrix.enabled=true
+hystrix.shareSecurityContext=true
+
+zuul.routes.grade-service.path=/grades
+zuul.routes.grade-service.url=http://localhost:8090
+
+zuul.routes.home.path=/home
+zuul.routes.home.url=http://localhost:8090
+
+zuul.sensitive-headers=Cookie,Set-Cookie
+
+spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb

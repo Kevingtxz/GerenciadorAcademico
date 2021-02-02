@@ -4,10 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.kevin.grademanager.dto.StudentDTO;
 
 @Document(collection="grade")
 public class Grade implements Serializable {
@@ -19,15 +16,12 @@ public class Grade implements Serializable {
 	private String subject;
 	private String grade;
 	private String approved;
-	private String student_name;
-	
-	@DBRef(lazy=true)
-	private StudentDTO student;
+	private String student;
 	
 	public Grade() {
 	}
 
-	public Grade(String id, Date date, String subject, String grade, String approved, StudentDTO student) {
+	public Grade(String id, Date date, String subject, String grade, String approved, String student) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -35,7 +29,6 @@ public class Grade implements Serializable {
 		this.grade = grade;
 		this.approved = approved;
 		this.student = student;
-		this.student_name = student.getStudent_name();
 	}
 
 	public String getId() {
@@ -61,14 +54,6 @@ public class Grade implements Serializable {
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
-
-	public String getStudent_name() {
-		return student_name;
-	}
-
-	public void setStudent_name(String student_name) {
-		this.student_name = student_name;
-	}
 	
 	public String getGrade() {
 		return grade;
@@ -86,11 +71,11 @@ public class Grade implements Serializable {
 		this.approved = approved;
 	}
 
-	public StudentDTO getStudent() {
+	public String getStudent() {
 		return student;
 	}
 
-	public void setStudent(StudentDTO student) {
+	public void setStudent(String student) {
 		this.student = student;
 	}
 

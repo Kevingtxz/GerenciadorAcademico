@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="clientService"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="true"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="clientService"/>
+			<item value="RequestInterceptor"/>
+			<item value="@"/>
+			<item value="@be"/>
+			<item value="ok"/>
+			<item value="okta"/>
+			<item value="aut"/>
+			<item value="car"/>
+			<item value="CorsFilter"/>
+			<item value="grade"/>
+			<item value="Car"/>
+			<item value="student_name"/>
+			<item value="devtools"/>
+		</list>
+		<list key="replacehistory">
+			<item value="grade"/>
+			<item value="Grade"/>
+			<item value="name"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="753"/>
+		<item key="DIALOG_Y_ORIGIN" value="231"/>
+		<item key="DIALOG_WIDTH" value="348"/>
+		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

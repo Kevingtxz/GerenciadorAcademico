@@ -1,0 +1,16 @@
+spring.application.name=api-gateway
+okta.oauth2.issuer=https://dev-133320.okta.com/oauth2/default
+okta.oauth2.client-id=0oa4txrenX9FIfDuP5d6
+okta.oauth2.client-secret=23Ec0zt30uWD-a7EdjL--IG0Cle_i6FfnCplOKeJ
+feign.hystrix.enabled=true
+hystrix.shareSecurityContext=true
+
+zuul.routes.grade-service.path=/grades
+zuul.routes.grade-service.url=http://localhost:8090
+
+zuul.routes.home.path=/home
+zuul.routes.home.url=http://localhost:8090
+
+zuul.sensitive-headers=Cookie,Set-Cookie
+
+spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb

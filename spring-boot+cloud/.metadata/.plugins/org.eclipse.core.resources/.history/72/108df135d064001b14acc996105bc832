@@ -1,0 +1,6 @@
+server.port=8090
+spring.application.name=grade-service
+spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb
+feign.hystrix.enabled=true
+hystrix.shareSecurityContext=true
+

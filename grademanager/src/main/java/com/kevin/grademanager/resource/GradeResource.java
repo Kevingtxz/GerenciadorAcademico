@@ -16,7 +16,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.kevin.grademanager.domain.Grade;
 import com.kevin.grademanager.dto.GradeDTO;
-import com.kevin.grademanager.dto.GradeNewDTO;
 import com.kevin.grademanager.service.GradeService;
 
 @RestController
@@ -40,7 +39,7 @@ class GradeResource {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ResponseEntity<Void> insert(@RequestBody GradeNewDTO objNewDto) throws ParseException {
+	public ResponseEntity<Void> insert(@RequestBody GradeDTO objNewDto) throws ParseException {
 		Grade obj = service.fromNewDTO(objNewDto);
 		obj = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
