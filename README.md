@@ -5,8 +5,7 @@ Projeto teste para GOmining mineradora de ideias
 ## Como usar
 A aplicação está configurada com:
 
-spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb
-server.port=8090
+spring.data.mongodb.uri=mongodb://127.0.0.1:27017/gradedb ~ server.port=8090
 
 Basta rodar a https://github.com/Kevingtxz/GradeManager/blob/main/grademanager/src/main/java/com/kevin/grademanager/GrademanagerApplication.java em Spring App para funcionar
 
